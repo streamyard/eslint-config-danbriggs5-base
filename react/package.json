@@ -19,7 +19,7 @@
 	},
 	"homepage": "https://github.com/streamyard/eslint-config-streamyard-base#readme",
 	"dependencies": {
-		"eslint-config-airbnb": "14.2.1",
+		"eslint-config-airbnb": "18.2.1",
 		"eslint-plugin-react": "7.13.0",
 		"eslint-plugin-react-hooks": "1.6.1"
 	},
