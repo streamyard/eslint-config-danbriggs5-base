@@ -18,7 +18,6 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/project/.npmrc
@@ -35,4 +34,4 @@ jobs:
 workflows:
   publish:
     jobs:
-      - install
+      - install-and-publish
