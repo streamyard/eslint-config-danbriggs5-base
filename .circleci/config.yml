@@ -1,0 +1,38 @@
+version: 2.1
+
+jobs:
+  install-and-publish:
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/project/.npmrc
+      - run:
+          name: Publish package
+          command: |
+            mkdir ~/.ssh/
+            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            git config --global user.email "alex.hayton@gmail.com"
+            git config --global user.name "Alex Hayton"
+            git branch --set-upstream-to main
+            npx release-it
+
+workflows:
+  publish:
+    jobs:
+      - install

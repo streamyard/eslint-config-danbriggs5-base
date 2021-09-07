@@ -1,0 +1,33 @@
+{
+	"name": "eslint-config-streamyard-react",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"eslint": "node node_modules/eslint/bin/eslint.js --ignore-path .eslintignore ./",
+		"precommit": "npm run eslint"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/streamyard/eslint-config-streamyard-base.git"
+	},
+	"author": "streamyard",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/streamyard/eslint-config-streamyard-base/issues"
+	},
+	"homepage": "https://github.com/streamyard/eslint-config-streamyard-base#readme",
+	"dependencies": {
+		"eslint-config-airbnb": "14.2.1",
+		"eslint-plugin-react": "7.13.0",
+		"eslint-plugin-react-hooks": "1.6.1"
+	},
+	"peerDependencies": {
+		"eslint": "^7.32.0"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"prettier": "2.3.2"
+	}
+}
