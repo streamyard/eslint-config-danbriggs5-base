@@ -26,7 +26,7 @@ jobs:
           command: |
             mkdir ~/.ssh/
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-            git config --global user.email "alex.hayton@gmail.com"
+            git config --global user.email "alex.hayton@hopin.to"
             git config --global user.name "Alex Hayton"
             git branch --set-upstream-to main
             npx release-it
