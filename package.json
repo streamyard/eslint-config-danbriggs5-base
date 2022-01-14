@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-danbriggs5-base",
+  "name": "@streamyard/eslint-config-streamyard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danbriggs5/eslint-config-danbriggs5-base.git"
+    "url": "git+https://github.com/streamyard/eslint-config-streamyard.git"
   },
-  "author": "danbriggs5",
+  "author": "StreamYard Engineering",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danbriggs5/eslint-config-danbriggs5-base/issues"
+    "url": "https://github.com/streamyard/eslint-config-streamyard/issues"
   },
-  "homepage": "https://github.com/danbriggs5/eslint-config-danbriggs5-base#readme",
+  "homepage": "https://github.com/streamyard/eslint-config-streamyard#readme",
   "dependencies": {
     "eslint-config-airbnb-base": "13.1.0"
   },
